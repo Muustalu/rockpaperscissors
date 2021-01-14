@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head></head>
+<body></body>
+<script>
+    let options = ["Rock", "Paper", "Scissors"];
+    
+    let computerSelection = function computerPlay() {
+        return options[Math.floor(Math.random() * options.length)];
+    }
+
+    let playerSelection = function() {
+        return prompt("Type Rock, Paper or Scissors");
+    }
+
+    function playRound(playerSelection, computerSelection) {
+        
+    if (playerSelection == "Rock") {
+            if (computerSelection == "Paper") {
+                console.log("You lose! Paper beats Rock");
+                return false;
+            } else {
+            if (computerSelection == "Rock") {
+                console.log("Draw! You both chose Rock");
+                return;
+            } else {
+                if (computerSelection == "Scissors") {
+                    console.log("You win! Rock beats Scissors");
+                    return true;
+                }
+            }
+        }
+    }
+    if (playerSelection == "Paper") {
+        if (computerSelection =="Scissors") {
+            console.log("You lose! Scissors beats Paper");
+            return false;
+        } else {
+            if (computerSelection == "Paper") {
+                console.log("Draw! You both chose Paper");
+                return;
+            } else {
+                if (computerSelection =="Rock") {
+                    console.log("You win! Paper beats Rock");
+                    return true;
+                }
+            }
+        }
+    }
+    if (playerSelection == "Scissors") {
+        if (computerSelection == "Rock") {
+            console.log("You lose! Rock beats Scissors");
+            return false;
+        } else {
+            if (computerSelection == "Scissors") {
+                console.log("Draw! You both chose Scissors");
+                return;
+            } else {
+                if (computerSelection == "Paper") {
+                    console.log("You win! Scissors beats Paper");
+                    return true;
+                }
+            }
+        }
+    } 
+}
+function game() {
+    
+}
+</script>
